@@ -42,19 +42,19 @@ int[] ReleaseMatrix(int[,] matrix)
     return array;
 }
 
-int MaxNumber(int[] array)
+int MinIndex(int[] array)
 {
-    int max = array[0];
-    int maxIndex = 0;
+    int min = array[0];
+    int minIndex = 0;
     for (int i = 1; i < array.Length; i++)
     {
-        if (array[i] > max) 
+        if (array[i] < min) 
         {
-            max = array[i];
-            maxIndex = i;
+            min = array[i];
+            minIndex = i;
         }
     }
-    return maxIndex;
+    return minIndex;
 }
 
 Console.Clear();
@@ -71,7 +71,7 @@ Console.WriteLine("Суммы чисел по строкам: ");
 Console.WriteLine(string.Join(", ", array));
 Console.WriteLine();
 
-int maxIndex = MaxNumber(array);
-int normalCount = maxIndex + 1;
+int minIndex = MinIndex(array);
+int normalCount = minIndex + 1;
 Console.WriteLine($"Строка с максимальным индексом: {normalCount}");
 Console.WriteLine();
