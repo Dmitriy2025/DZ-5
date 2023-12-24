@@ -73,5 +73,5 @@ Console.WriteLine();
 
 int minIndex = MinIndex(array);
 int normalCount = minIndex + 1;
-Console.WriteLine($"Строка с максимальным индексом: {normalCount}");
+Console.WriteLine($"Строка с наименьшей суммой элементов: {normalCount}");
 Console.WriteLine();

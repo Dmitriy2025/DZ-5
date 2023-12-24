@@ -28,6 +28,7 @@ void PrintMatrix(int[,] matrix)
 
 
 Console.Clear();
+Console.WriteLine("Осуществляйте ввод значений через запятую.");
 Console.Write("Задайте размер маттрицы: ");
 
 int[] size = Console.ReadLine().Split(",").Select(x => int.Parse(x)).ToArray();
